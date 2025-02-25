@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HIT</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+        <script src="https://kit.fontawesome.com/ad6e983edc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.0.3/distribute/nouislider.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/nouislider@14.0.3/distribute/nouislider.min.js"></script>
+
+    </head>
+    
+    <body>
+        <form onsubmit="return confirm('Thanks. Please click OK to confirm your answer!');" name="mturk_form" method="post" id="mturk_form" action="https://www.mturk.com/mturk/externalSubmit">
+            <input type="hidden" value="" name="assignmentId" id="assignmentId" />
+     
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
+    
+        <p>&nbsp;</p>
+        <section class="container" id="voicellm">
+        <!-- Instructions (collapsible) -->
+    
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4> <b> Version 5 </b> </h4>
+                        <b> Make sure you fully understand the detailed instructions. Even if you've seen our task before, if the version number is different there have been updates, so check again. </b> <br>
+                        <b> Also note the following from our analysis of the data collected from the previous iterations: </b> <br>
+                        <ul>
+                            <li>
+                                Do not accept the HIT if you will not do it right away. The task takes about 2 minutes each on average, where some responses can be long. We observed many annotators who submitted clearly wrong answers or irrelevant explanations because they got mixed up with another HIT. If we observe a large difference in HIT acceptance time and HIT completion time, we will block you from future HITs.
+                            </li>
+                            <li>
+                                We will block annotators who submit low quality work that do not follow the instructions. Remember we are looking for conversational responses, not just informative responses.
+                            </li>
+                            <li>
+                                <b>Any suspected use of bots, LLMs, or scripts will result in a block as well.</b>
+                            </li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-12 col-12">
+                <div class="panel panel-primary">
+                    <a class="panel-heading collapseTrigger" href="javascript:void(0);"><strong>Detailed instructions</strong> 
+                        <span class="collapse-text">(Click to expand)</span> 
+                    </a>
+                  
+                    <div class="panel-body instructionBody">
+
+                        <div class="">
+                            <ul>
+                                <li>
+                                    <b>Main task:</b> Listen to the user request and the two response choices and answer the survey.
+                                </li>
+                                <ol>
+                                    <li>
+                                        Choose the response you prefer for a conversational interaction with a voice assistant. Even if similar, force yourself to choose one.
+                                    </li>
+                                    <li>
+                                        Indicate how much better the response is to the other. Choose "negligibly better" if similar. 
+                                    </li>
+                                    <li>
+                                        Provide a brief explanation for your choice. It can be very brief. Refer to examples in the detailed instructions.  
+                                    </li>
+                                </ol>
+                                <li>
+                                    <b>Understand preference criteria and the sample annotations <a href="https://docs.google.com/presentation/d/1NjeiRoKGcGGnfYSZT113bT_TtN51jinS4-f5WcNKzIY/edit?usp=sharing" target="_blank">here.</a></b>
+                                    <ul>
+                                        <li>
+                                            A response will often not be better than another in all of these criteria, so use your best judgment to determine which response you prefer overall for a conversational voice-based interaction.
+                                        </li>
+                                        <li>
+                                            <b>Conversational:</b> The response should be conversational. You don't want an essay or an overwhelming list of facts. It should be something you can imagine a voice assistant saying in a conversation. Also, you don't want a response that sounds like it's reading from a script or hear words that aren't usually spoken out, e.g., "In addition" instead of "Also".
+                                        </li>
+                                        <li>
+                                            <b>Relevance / helpfulness:</b> The response should address the user's request, or, if not, ask a follow-up question that would help user clarify  their goal.
+                                        </li>
+                                        <li>
+                                            <b>Engagement:</b> The response should be engaging and maintain the user's interest. It should not be boring or overly technical.
+                                        </li>  
+                                        <li>
+                                            <b>Understandability:</b> The response should be easy to understand so that you don't have to listen to it multiple times.
+                                        </li>
+                                        <li>
+                                            <b>Completeness:</b> Responses should not omit essential information.
+                                        </li>
+                                        <li>
+                                            <b>Conciseness:</b> Brevity is important. While details can be useful, it should not make the response more difficult to understand nor come at a great expense of the user's time.
+                                        </li>
+                                        <li>
+                                            <b>Safety:</b> Responses should avoid promoting harmful actions or giving unsafe advice.
+                                        </li>
+                                        <li>
+                                            <b>Others:</b> You may simply like one response more than the other for reasons not listed above. Briefly provide your reason. 
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        <b>Other guidelines</b>
+                                    </li>
+                                        <ul>
+                                            <li>
+                                                Try to limit yourself to listen to each response only once for a more realistic simulation of a voice-based interaction. You may listen to them multiple times if you need to since you may forget what the other response was like. 
+                                            </li>
+                                            <li>
+                                                Fine-grained audio control is intentionally disabled. Pause, play, and replay are only intended to be used when there are technical issues that prevented you from listening to the response.
+                                            </li>
+                                            <li>
+                                                The survey will appear after listening to the user request and the responses to reduce distractions when listening. 
+                                            </li>
+                                        </ul> 
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End instructions --><!-- Categorization Layout -->
+    
+        <div class="row" id="workContent">
+    
+            <div class="hidden" id="data">
+                ${data}
+                <!-- {"instruction": "Which is a species of fish? Tope or Rope", "instruction_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/6ebeae61d2aa9b8e4706452420fd90a44a65f778_instruction.mp3", "model_0": "gpt-4_simple_response_1.0", "model_0_response": "Tope is a species of fish. It's a type of shark found in temperate seas around the world. Meanwhile, a rope is not a species of fish, it's a length of strong cord made by twisting together strands of natural fibers.", "model_0_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/6ebeae61d2aa9b8e4706452420fd90a44a65f778_gpt-4_simple_response_1.0.mp3", "model_1": "gpt-4_simple_response_1.3", "model_1_response": "The species of fish between the two is Tope. A Tope is a type of shark that belongs to the Triakidae family. 'Rope' does not designate a type of fish species.", "model_1_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/6ebeae61d2aa9b8e4706452420fd90a44a65f778_gpt-4_simple_response_1.3.mp3", "set_type": "audio"} -->
+                <!-- {"instruction": "When did Virgin Australia start operating?", "instruction_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/038f33e82dfe14ae1f78d8e4f76457625cb20a99_instruction.mp3", "model_0": "falcon-7b-instruct_detailed_response_1.0", "model_0_response": "Virgin Australia was founded in October 2011.", "model_0_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/038f33e82dfe14ae1f78d8e4f76457625cb20a99_falcon-7b-instruct_detailed_response_1.0.mp3", "model_1": "gpt-4_easy_response_0.7", "model_1_response": "Virgin Australia started working in the year 2000. It's been around for a long time!", "model_1_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/038f33e82dfe14ae1f78d8e4f76457625cb20a99_gpt-4_easy_response_0.7.mp3", "set_type": "audio"} -->
+            </div>
+            
+            <div class="container-fluid annotation_set" id="annotation_set">
+
+                <div class="row d-flex align-items-stretch">
+                  <!-- Chat section (70%) -->
+                    <div class="col-6" id="chat-pane">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5>Interaction</h5>
+                            </div>
+                            <div id="chat-window" class="card-body chat-window-class">
+                                <!-- user message -->
+                                <!-- response messages -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                      <!-- Feedback section (30%) -->
+                    <div class="col-6 hidden" id="survey-pane">
+                    <!-- <div class="col-4 hidden" id="survey-pane"> -->
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5>Survey</h5>
+                            </div>
+
+                            <div class="card-body survey-window-class" id="survey-window">
+
+                                <div class="question-div">
+                                    <h5>Briefly explain your choice.</h5>
+                                    <textarea 
+                                        name="explanation" 
+                                        class="form-control interface-feedback mandatory" 
+                                        rows="3"
+                                        placeholder="e.g. length and amount of information is more adequate, more natural, more relevant, asks better follow-up question, easier to understand, length is more adequate for 1 but 2 asks more relevant follow-up question, etc."
+                                    ></textarea>
+                                </div>
+
+
+                                <div class="question-div">
+                                    <h5>(Optional) Let us know if you have any feedback on the task.</h5>
+                                    <textarea name="other-feedback" class="form-control other-feedback optional" rows="3"></textarea>
+                                </div>
+                                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4" id="answer-pane">
+                        <!-- Do no the remove the following line. It will be used to insert MTurk answers when done: -->
+                        <!-- __ANSWERS__ -->
+                    </div>
+
+                    <!-- add a "next" button that's center aligned -->
+                    <div class="col-12 next-button-pane">
+                        <button class="btn btn-primary" id="nextButton">Next</button>
+                    </div>
+                </div>
+        </div>    
+        </section>
+    
+    <!-- End Categorization Layout --><!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+    
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
+    
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+    
+    .collapseTrigger{
+        color:#fff;
+        display: block;
+        text-decoration: none;
+    }
+    .chat-message{
+        width: 60%;
+    }
+
+    #submitButton{
+        white-space: normal;
+    }
+    .instructionBody table{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .instructionBody table caption{
+        text-align: left;
+        padding: 0 0 5px 0;
+    }
+    #Inputs{
+        display: block;
+        margin-top: 10px;
+    }
+    .content{
+        margin-bottom: 15px;
+    }
+    .radio:first-of-type{
+        margin-top: -5px;
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
+    .next-button-pane{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    #main_submit{
+        margin-top: 20px;
+    }
+
+    .chat-message-right > .card-header{
+        background-color: #5487ff;
+        color: white;
+    }
+
+    .chat-message-left > .card-header{
+        background-color: #5c5c5c;
+        color: white;
+    }
+
+
+    mysection_yesno {
+                display: flex;
+                /* flex-flow: row wrap; */
+                justify-content: center;
+            }
+
+            mysection_yesno > div {
+                padding: 0.5rem;
+
+            }
+            #yesnodiv{
+                width: 100%; 
+            }
+
+            #yesnoquestion{
+                height: 100%;
+                width: 100%;
+            }
+
+            input[type=radio] {
+                display: none;
+            }
+
+            input[type=radio]:not(:disabled) ~ label {
+                cursor: pointer;
+            }
+
+            input[type=radio]:disabled ~ label {
+                color: #bcc2bf;
+                border-color: #bcc2bf;
+                box-shadow: none;
+                cursor: not-allowed;
+            }
+
+            label {
+                height: 85px;
+                background: white;
+                border: 2px solid #cecece;
+                width: 45%; 
+                border-radius: 20px;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+                position: relative;
+                font-size: 90%;
+				display: flex !important;
+              justify-content: center;
+              align-content: center;
+              flex-direction: column;
+            }
+
+            input[type=radio]:checked + label {
+                background: #cecece;
+                color: white;
+                box-shadow: 0px 0px 20px #cecece;
+            }
+
+            input[type=radio]:checked + label::after {
+                color: #3d3f43;
+                font-family: FontAwesome;
+                border: 2px solid #cecece;
+                content: "";
+                font-size: 24px;
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                background: white;
+                box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+            }
+
+
+            input[type=radio]:checked + label #special-text .special-text2 {
+                background-color: transparent;
+            }
+
+            input[type=radio]:checked + label #special-text .special-text3 {
+                background-color: transparent;
+            }
+
+            .special-text2{
+                background-color:#FEFC8C;
+            }
+
+            .special-text3{
+                background-color:#8cd0fe;
+            }
+
+            input[type=radio]:checked + label {
+                background: #5487ff;
+                border-color: #5487ff;
+                color: white;
+                opacity: 100%;
+            }
+
+            /* limit height of survey-window */
+            .survey-window-class {
+                padding: 0; 
+                max-height: 80vh;
+                overflow-y: scroll;
+            }
+
+            .chat-window-class {
+                overflow-y: scroll; 
+                max-height: 80vh; 
+            }
+
+            .question-div {
+                padding: 10px; 
+            }
+
+    </style>
+    <!-- Close internal style sheet -->
+    
+    <!-- External JS references -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+    
+    <!-- Open internal javascript -->
+    <script>
+
+        $(document).ready(function() {
+
+            let internal_test = false;
+            // const internal_test = false;
+            // if answer-pane doesn't contain __ANSWERS__, then it's an internal test
+            console.log($('#answer-pane').html())
+            if ($('#answer-pane').html().indexOf("__ANSWERS__") == -1){
+                internal_test = true;
+                // change survey pane class to col-4
+                $('#survey-pane').removeClass('col-6');
+                $('#survey-pane').addClass('col-4');
+                // change chat pane class to col-8
+                $('#chat-pane').removeClass('col-6');
+                $('#chat-pane').addClass('col-4');
+                // change voicellm to container-fluid
+                $('#voicellm').removeClass('container');
+                $('#voicellm').addClass('container-fluid');
+
+            }            
+
+
+            console.log("internal test: " + internal_test)
+
+            const multi_response_survey = [
+                // {
+                //     "question": "Which response was the most suitable in terms of length?",
+                //     "alias": "length"
+                // }, 
+                // {
+                //     "question": "Which response was the most relevant?",
+                //     "alias": "relevance"
+                // }, 
+                // {
+                //     "question": "Which response was the most informative?",
+                //     "alias": "informative"
+                // },
+                // {
+                //     "question": "Which response was the easiest to understand?",
+                //     "alias": "understand"
+                // }, 
+                // {
+                //     "question": "Which response was the most natural?",
+                //     "alias": "natural"
+                // }
+            ]
+
+            const single_response_survey = [
+            // {
+            //         "question": "Is response 1 factually accurate?", 
+            //         "alias": "response_1_factual", 
+            //         "options": [
+            //             {
+            //                 "labelText": "Yes",
+            //                 "subtext": ""
+            //             },
+            //             {
+            //                 "labelText": "Partially factual", 
+            //                 "subtext": ""
+            //             },
+            //             {
+            //                 "labelText": "No", 
+            //                 "subtext": ""
+            //             }, 
+            //             {
+            //                 "labelText": "Too many to verify", 
+            //                 "subtext": ""
+            //             }, 
+            //         ]
+            //     },
+            //     {
+            //         "question": "Is response 2 factually accurate?", 
+            //         "alias": "response_2_factual", 
+            //         "options": [
+            //             {
+            //                 "labelText": "Yes",
+            //                 "subtext": ""
+            //             },
+            //             {
+            //                 "labelText": "Partially factual", 
+            //                 "subtext": ""
+            //             },
+            //             {
+            //                 "labelText": "No", 
+            //                 "subtext": ""
+            //             }, 
+            //             {
+            //                 "labelText": "Too many to verify", 
+            //                 "subtext": ""
+            //             }, 
+            //         ]
+            //     },
+                {
+                    "question": "Which response would you prefer to hear from a conversational voice assistant?", 
+                    "alias": "overall", 
+                    "options": [
+                        {
+                            "labelText": "Response 1",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Response 2", 
+                            "subtext": ""
+                        }, 
+                    ]
+                },
+                {
+                    "question": "How much better was the chosen response?",
+                    "alias": "margin",
+                    "options": [
+                        {
+                            "labelText": "Significantly better",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Better", 
+                            "subtext": ""
+                        }, 
+                        {
+                            "labelText": "Slightly better", 
+                            "subtext": ""
+                        }, 
+                        {
+                            "labelText": "Negligibly better",
+                            "subtext": ""
+                        }
+                    ]
+
+                }, 
+            ]
+
+            function fetchAudio(url) {
+                return fetch(url)
+                    .then(response => response.blob())
+                    .then(blob => {
+                        return new Promise((resolve, reject) => {
+                            const reader = new FileReader();
+                            reader.onloadend = () => resolve(reader.result);
+                            reader.onerror = reject;
+                            reader.readAsDataURL(blob);
+                        });
+                    });
+            }
+
+            function createCard(audioUrl, text, message_type, set_type, idx, extra) {
+
+                var card = $(
+                    `<div class="card mt-3 ml-auto chat-message chat-message-right">
+                        <div class="card-header chat-header">
+                        <i class="btn-action fa-solid fa-eye-slash toggle-eye"></i>
+                        </div>
+                        <div class="card-body">
+                        <audio class="audioPlayer">
+                            <source src="|audio_url|" type="audio/mpeg">
+                        </audio>
+                        <button class="playButton">Play</button>
+                        <p class="card-text response-text hidden"></p>
+                        </div>
+                    </div>`.replace("|audio_url|", audioUrl)
+                );
+                
+                card.find('.response-text').html(text);
+
+                if (message_type == "user") {
+                    // make chat header blue 
+                    card.addClass('mr-auto'); 
+                    card.removeClass('ml-auto'); 
+                    card.addClass('chat-message-left');
+                    card.removeClass('chat-message-right');
+                    card.find('.card-header').prepend("User");
+                }
+                else if (message_type == "response") {
+                    card.addClass('chat-message-right');
+                    // if there is idx, add it to the card header
+                    if (idx != undefined){
+                        card.find('.card-header').prepend("Response " + (idx+1));
+                    }
+                    else {
+                        card.find('.card-header').prepend("Response");
+                    }
+
+                    //  if extra is defined, add it to the card header
+                    if (extra != undefined){
+                        // add extra to card-text html
+                        card.find('.card-text').append('<br><br><b>Model config:</b> ' + extra);
+                    }
+                }
+
+                setMessageType(card, set_type);
+
+                // if internal test, make card-text visible and set fa-eye-slash to fa-eye
+                if (internal_test){
+                    card.find('.card-text').removeClass('hidden');
+                    card.find('.toggle-eye').removeClass('fa-eye-slash');
+                    card.find('.toggle-eye').addClass('fa-eye');
+                }
+
+                return card 
+            }
+
+            function setMessageType(message, set_type){
+                if (set_type == "audio"){
+                    // hide text
+                    message.find('.card-text').addClass('hidden');
+                }
+                else if (set_type == "text"){
+                    // hide audio player
+                    message.find('.audioPlayer').addClass('hidden');
+                    message.find('.playButton').addClass('hidden');
+                    // show text 
+                    message.find('.card-text').removeClass('hidden');
+                    // remove eye icon
+                    message.find('.toggle-eye').remove();
+                }
+            }
+
+            function createChatWindow(set_type, template, data, idx){
+                console.log("inside createChatWindow")
+                template.attr('id', 'chat-pane-' + idx);
+
+                template.find('#chat-window').attr('id', 'chat-window-' + idx);
+                
+                // create a copy of the survey window
+                // remove the existing one 
+                var chatWindow = template.find('#chat-window-' + idx);
+
+                // add header saying conversation idx 
+                // var header = $('<h4 class="alert-info">Conversation ' + (idx+1) + '</h4>');
+
+                // create user card 
+                var user_message = data['user']['text'];
+                var user_audio_url = data['user']['audio_url'];
+                var user_card = createCard(user_audio_url, user_message, "user", set_type);
+                chatWindow.append(user_card);
+
+                // create response cards
+                var responses = data['responses'];
+                for (var i=0; i < responses.length; i++) {
+                    var response = responses[i]['text'];
+                    var audioUrl = responses[i]['audio_url'];
+                    var response_card = createCard(audioUrl, response, "response", set_type, idx=i, extra=responses[i]['key']);
+                    chatWindow.append(response_card);
+                }
+
+                return template;
+            }
+
+
+            // Instructions expand/collapse
+            var triggers = $('.collapseTrigger');
+
+            for (var i=0; i < triggers.length; i++){
+                var trigger = triggers[i];
+                var content = $(trigger).next();
+                // if content contains collapse in its text, hide 
+                // find .collapse-text inside content 
+                header = content.find('.collapse-text');
+                content.hide();
+                $(trigger).click(function(){
+                    content.toggle();
+                    var isVisible = content.is(':visible');
+                    if(isVisible){
+                        $('.collapse-text').text('(Click to collapse)');
+                    }else{
+                        $('.collapse-text').text('(Click to expand)');
+                    }
+                });
+            }
+
+
+
+
+
+            // end expand/collapse
+
+            var annotation_data_text = $('#data').text().trim();
+            // if annotation_data_text starts with ", remove it 
+            if (annotation_data_text[0] == '"'){
+                annotation_data_text = annotation_data_text.substring(1, annotation_data_text.length - 1);
+            }
+            annotation_data_text = annotation_data_text.trim(); 
+            // annotation_data_text = annotation_data_text.replace('\"', '"')
+            annotation_data_text = annotation_data_text.replace(/\\([^n"])/mg, "$1");
+            // replace \\\" with '
+            annotation_data_text = annotation_data_text.replace(/\\\"/g, '"');
+            var annotation_data = JSON.parse(annotation_data_text)
+            // if annotation_data is not a list, wrap it in a list. this is just to use previous code 
+            if (!Array.isArray(annotation_data)){
+                annotation_data = [annotation_data]
+            }
+
+            var n_annotation_sets = annotation_data.length;
+
+            function createAnnotationSet(annotation_set_idx, template, questions_data){
+
+                if (annotation_set_idx == n_annotation_sets-1){
+                    template.find('.next-button-pane').remove();
+                }
+
+                preference_pair = ['model_0', 'model_1']
+                
+                // preference_pair = questions_data["preference_pair"]
+                for (var i=0; i < preference_pair.length; i++){
+                    questions_data[preference_pair[i] + "_response"] = questions_data[preference_pair[i] + "_response"].replace(/(?:\r\n|\r|\n)/g, '<br>'); 
+                }
+
+                responses_data = [] 
+                for (var i = 0 ; i < preference_pair.length; i++){
+                    var response_data = {
+                        "key": questions_data[preference_pair[i]], 
+                        "text": questions_data[preference_pair[i] + "_response"],
+                        "audio_url": questions_data[preference_pair[i] + "_audio_url"],
+                    }
+                    responses_data.push(response_data)
+                }
+
+                preference_annotation_data = {
+                    "user": {
+                        "text": questions_data['instruction'],
+                        "audio_url": questions_data['instruction_audio_url'],                            
+                    },
+                    "responses": responses_data
+                }
+
+                var set_type = questions_data['set_type'];
+                // var annotation_set = $('#annotation_set');
+
+                // clone template
+                var chat_pane_template = template.find('#chat-pane').clone();    
+                chatWindow = createChatWindow(set_type, chat_pane_template, preference_annotation_data, idx=0)
+                // add to annotation_set child where class=row
+                template.children('.row').prepend(chatWindow);
+                
+                // remove template
+                template.find('#chat-pane').remove();
+
+                var n_responses = 2 
+
+                var survey_pane = template.find("#survey-pane");
+                var survey_window = template.find('#survey-window');
+                survey_window.attr('id', 'survey-window-' + annotation_set_idx);
+                createSurvey(n_responses, survey_window, annotation_set_idx); 
+
+                if (set_type == "text" || internal_test){
+                    survey_pane.removeClass('hidden');
+                }   
+
+
+                // add idx to freeform feedback inputs id
+                // annotation_set.find('.annotation-feedback').attr('id', 'annotation-feedback_' + idx);
+                // annotation_set.find('.annotation-feedback').attr('name', 'annotation-feedback_' + idx);
+                // annotation_set.find('.interface-feedback').attr('id', 'interface-feedback_' + idx);
+                // annotation_set.find('.interface-feedback').attr('name', 'interface-feedback_' + idx);
+                // annotation_set.find('.other-feedback').attr('id', 'other-feedback_' + idx);
+                // annotation_set.find('.other-feedback').attr('name', 'other-feedback_' + idx);
+
+                // add annotation set to work 
+                $('#workContent').append(template);
+                
+                if (annotation_set_idx > 0){
+                    template.addClass('hidden');
+                }
+
+            }
+
+            for (var i=0; i < annotation_data.length; i++){
+                var annotation_set = $('#annotation_set').clone();
+                annotation_set.attr("id", "#annotation_set"+i); 
+                createAnnotationSet(i, annotation_set, annotation_data[i]);
+            }
+            $('#annotation_set').remove();          
+            
+            setupDynamicComponents();
+            
+
+            function createQuestion(question) {
+                var question = $(
+                    `<h5 class="question alert-warning">
+                        |question|
+                    </h5>`.replace('|question|', question)
+                );
+                return question;
+            }
+
+            function createOption(class_, name, id, value, labelText, subtext) {
+                var option = $(
+                    `<div id="yesnodiv">
+                        <input type="radio" class="|class_| radio_buttons" id="|id|" name="|name|" value="|value|">
+                        <label for="|id|" id="yesnoquestion">
+                            <span style="font-size: 15px"> |labelText| </span>
+                            <p id="special-text" style="font-weight: normal;">
+                                |subtext|
+                            </p>
+                        </label>
+                    </div>`
+                    .replace('|class_|', class_)
+                    .replace('|name|', name)
+                    .replace('|id|', id)
+                    .replace('|id|', id)
+                    .replace('|value|', value)
+                    .replace('|labelText|', labelText)
+                    .replace('|subtext|', subtext)
+                );
+                return option;
+            }
+
+            function createOptions(options_data, set_idx, name) {
+                var options = $('<mysection_yesno class="survey-options"></mysection_yesno>');
+                for (var i=0; i< options_data.length; i++) {
+                    var option = createOption("radio" + set_idx + "_" + (i+1), name + "_" + set_idx, name + "_" + set_idx + "_" + (i+1), value=options_data[i]['labelText'], labelText=options_data[i]['labelText'], subtext=options_data[i]['subtext']);
+                    options.append(option);
+                }
+                return options; 
+            }
+
+            function createPreferenceOptions(n_responses, set_idx, name){
+                var options = $('<mysection_yesno class="survey-options"></mysection_yesno>');
+                for (var responseNumber=1; responseNumber< n_responses+1; responseNumber++) {
+                    option_subname = "_" + set_idx + "_" + responseNumber
+                    var option = createOption("radio" +  option_subname, name + "_" + set_idx, name + "_" + option_subname, value=responseNumber, labelText="Response " + responseNumber, subtext="");
+                    options.append(option);
+                }
+                return options;
+            }
+
+
+
+            function createSurvey(n_responses, survey_window, set_idx){
+                // single-response setting 
+                
+                console.log("create single-response questions")
+                for (var i=single_response_survey.length-1; i > -1 ; i--) {
+                    var question = single_response_survey[i]['question'];
+                    var alias = single_response_survey[i]['alias'];
+                    var options_data = single_response_survey[i]['options'];
+                    console.log(options_data)
+
+                    var question = createQuestion(question);
+                    var options = createOptions(options_data, set_idx, alias);
+
+                    var question_div = $('<div class="question-div"></div>');
+                    question_div.append(question);
+                    question_div.append(options);
+                    survey_window.prepend(question_div);
+                }
+
+                // console.log("create preference questions for multi-response setting")
+                // for (var i=multi_response_survey.length-1; i > -1 ; i--) {
+                //     var question = multi_response_survey[i]['question'];
+                //     var alias = multi_response_survey[i]['alias'];
+                //     var question = createQuestion(question);
+                //     var options = createPreferenceOptions(n_responses, set_idx, alias);
+                //     console.log(options)
+
+                //     var question_div = $('<div class="question-div"></div>');
+                //     question_div.append(question);
+                //     question_div.append(options);
+                    
+                //     survey_window.prepend(question_div);
+                // }
+            }
+            //  find all radio inputs 
+            $('.radio_buttons').on('click', function() {
+                var currentQuestionDiv = $(this).parent().parent().parent();
+                // height total of all previous .question-divs 
+                var prev_height = 0; 
+                var prev_question_divs = currentQuestionDiv.prevAll('.question-div');
+                prev_question_divs.each(function() {
+                    prev_height += $(this).innerHeight();
+                });
+
+                console.log($(this))
+                console.log(currentQuestionDiv)
+                // find the survey window that contains the current question div
+                var survey_window = currentQuestionDiv.parent();
+                console.log(survey_window)
+                survey_window.animate({
+                    scrollTop: currentQuestionDiv.innerHeight()  + prev_height
+                }, 500);
+
+                console.log(currentQuestionDiv.innerHeight())
+                console.log(prev_height)
+            });
+            
+
+            let isPlaying = false; 
+
+
+            function toggleAllOtherPlayButtons(annotation_set, playButton) {
+                var playButtons = annotation_set.querySelectorAll('.playButton');
+
+                for (var i = 0; i < playButtons.length; i++) {
+                    if (playButtons[i] != playButton) {
+                        if (playButtons[i].disabled){
+                            playButtons[i].disabled = false;
+                        } else {
+                            playButtons[i].disabled = true;
+                        }
+                    }
+                }
+            }
+
+            function setupDynamicComponents(){
+                
+
+                annotation_sets = document.querySelectorAll('.annotation_set');
+                console.log(annotation_sets)
+
+                annotation_sets.forEach((annotation_set) => {
+                    var playButtons = annotation_set.querySelectorAll('.playButton');
+
+                    playButtons.forEach((playButton) => {
+                        const audioPlayer = playButton.previousElementSibling;
+
+                        audioPlayer.addEventListener('ended', () => {
+                            playButton.textContent = 'Play'; // Change the play button text
+                            // change card-header color to green 
+                            playButton.parentNode.parentNode.querySelector('.chat-header').classList.add('bg-success');
+                            // show survey-window when all response headers are green
+                            var responseHeaders = annotation_set.getElementsByClassName('chat-header');
+                            var allGreen = true;
+                            for (var i = 0; i < responseHeaders.length; i++) {
+                                if (!responseHeaders[i].classList.contains('bg-success')) {
+                                    allGreen = false;
+                                    break;
+                                }
+                            }
+                            if (allGreen) {
+                                console.log($(annotation_set).find('#survey-pane'))
+                                $(annotation_set).find('#survey-pane').removeClass('hidden');
+                            }
+                            toggleAllOtherPlayButtons(annotation_set, playButton);
+                        });
+
+                        playButton.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            if (audioPlayer.paused) {
+                                audioPlayer.play();
+                                playButton.textContent = 'Pause';
+                                // disable all other play buttons
+                                toggleAllOtherPlayButtons(annotation_set, playButton);
+                            } else {
+                                audioPlayer.pause();
+                                playButton.textContent = 'Play';
+                                // enable all other play buttons
+                                toggleAllOtherPlayButtons(annotation_set, playButton);
+                            }
+                        });
+                    });
+                }); 
+
+
+                // click on eye icon to show/hide text
+                var eyeIcons = document.getElementsByClassName('toggle-eye');
+                for (var i = 0; i < eyeIcons.length; i++) {
+                    eyeIcons[i].addEventListener('click', function(){
+                        //change one class name to another 
+                        return function(){
+                            this.classList.toggle('fa-eye-slash'); 
+                            this.classList.toggle('fa-eye'); 
+
+                            // hide/show text after click 
+                            var textElement = this.parentNode.parentNode.querySelector('.card-text');
+                            textElement.classList.toggle('hidden');
+                        }; 
+                    }());
+                }
+
+                // remove eye icons for actual collection 
+                for (var i = 0; i < eyeIcons.length; i++) {
+                    
+                    if (!internal_test){
+                        eyeIcons[i].classList.add('hidden');
+                    }
+                }
+
+                // click on next button to show next annotation set
+                var nextButtonPanes = document.getElementsByClassName('next-button-pane');
+                console.log(nextButtonPanes)
+                for (var k = 0; k < nextButtonPanes.length; k++) {
+                    var nextButton = nextButtonPanes[k].querySelector('.btn');
+                    nextButton.addEventListener('click', (event) => {
+                        // prevent default 
+                        event.preventDefault();
+                        console.log("clicked next button")
+                        parent_annotation_set = nextButton.parentNode.parentNode.parentNode
+                        console.log(parent_annotation_set)
+                        //change one class name to another 
+
+                        parent_annotation_set.classList.add('hidden');
+                        // show next annotation set 
+                        parent_annotation_set.nextElementSibling.classList.remove('hidden');
+
+                    });
+                }
+            }
+
+            function disableButton(name) {
+                document.getElementById(name).disabled = true;
+            }
+
+            function enableButton(name) {
+                document.getElementById(name).disabled = false;
+            }
+
+            function ensureOneChecked(name) {
+                var elems = document.getElementsByName(name);
+                var okay = false;
+                for (var i = 0, l = elems.length; i < l; i++) {
+                    if (elems[i].checked) {
+                        okay = true;
+                        break;
+                    }
+                }
+                return okay;
+            }
+
+            disableButton('submitButton');
+            // disableButton('nextButton'); 
+
+            function maybeEnableSubmit() {
+                // get all names of radio elements
+                var names = [];
+                var elems = document.getElementsByTagName('input');
+                for (var i = 0, l = elems.length; i < l; i++) {
+                    if (elems[i].type === 'radio') {
+                        names.push(elems[i].name);
+                    }
+                }
+
+                // get all textareas with classname mandatory 
+                var textareas = document.getElementsByClassName('mandatory');
+
+                // check if all radio elements have been checked
+                enable = true;
+                for (var i = 0; i < names.length; i++) {
+                    if (!ensureOneChecked(names[i])) {
+                        enable = false;
+                        console.log("not checked: " + names[i])
+                    }
+                }
+
+                for (var i = 0; i < textareas.length; i++) {
+                    if (textareas[i].value.trim() == "") {
+                        enable = false;
+                        console.log("empty textarea: " + textareas[i])
+                    }
+                }
+
+                if (enable){
+                    enableButton('submitButton');
+                }
+                else{
+                    disableButton('submitButton');
+                }
+            }
+
+            function maybeEnableNext(survey_pane) {
+
+                // if there is not next button pane, return
+                if (survey_pane.parentNode.querySelector('.next-button-pane') == null){
+                    return;
+                }
+
+                // find next button 
+                var nextButton = survey_pane.parentNode // annotation_set
+                        .querySelector('.next-button-pane')
+                        .querySelector('.btn')
+                console.log(nextButton)
+
+                // check if all radio elements inside survey pane have been checked
+                enable = true;
+                var names = [];
+                var elems = survey_pane.getElementsByTagName('input');
+                for (var i = 0, l = elems.length; i < l; i++) {
+                    if (elems[i].type === 'radio') {
+                        names.push(elems[i].name);
+                    }
+                }
+
+                var textareas = survey_pane.getElementsByClassName('mandatory');
+
+                for (var i = 0; i < names.length; i++) {
+                    if (!ensureOneChecked(names[i])) {
+                        enable = false;
+                        console.log("not checked: " + names[i])
+                    }
+                }
+
+                for (var i = 0; i < textareas.length; i++) {
+                    if (textareas[i].value == "") {
+                        enable = false;
+                        console.log("empty textarea: " + textareas[i])
+                    }
+                }
+
+                if (enable){
+                    enableButton('nextButton');
+                }
+            }
+
+            // add maybeEnableSubmit to all radio buttons
+            var radioButtons = document.getElementsByClassName('radio_buttons');
+            for (let i = 0; i < radioButtons.length; i++) {
+                radioButtons[i].addEventListener('click', () => {
+                    // find next button in the same annotation set 
+                    survey_pane = radioButtons[i].parentNode // div
+                        .parentNode // mysection_yesno
+                        .parentNode // question-div
+                        .parentNode // survey-window
+                        .parentNode // survey-pane
+                        .parentNode
+                    
+
+                    console.log(survey_pane)
+                    maybeEnableSubmit();
+                    maybeEnableNext(survey_pane);   
+                });
+            }
+
+            // add maybeEnableSubmit to all textareas when something is typed
+            var textareas = document.getElementsByClassName('mandatory');
+            for (let i = 0; i < textareas.length; i++) {
+                textareas[i].addEventListener('input', () => {
+                    maybeEnableSubmit();
+                    maybeEnableNext(survey_pane);   
+                });
+            }
+
+
+            // archived code for dynamic TTS, may need later for multi-turn setup 
+            // var playButtons = document.getElementsByClassName('play-button');
+
+            // function playAudio(text) {
+            //     if (isPlaying) return; 
+
+            //     // fetch('http://localhost:3000/convert-to-speech?text=' + encodeURIComponent(text))
+            //     fetch('http://54.68.178.155/:3000/convert-to-speech?text=' + encodeURIComponent(text))
+            //         .then(response => response.blob())
+            //         .then(blob => {
+            //         const audioElement = new Audio();
+            //         audioElement.src = URL.createObjectURL(blob);
+                    
+            //         isPlaying = true;
+            //         for (let button of playButtons) {
+            //             button.disabled = true;
+            //         }
+
+            //         audioElement.play().then(() => {
+            //             audioElement.onended = function() {
+            //                 isPlaying = false; // reset flag to false when audio ends
+            //                 for (let button of playButtons) {
+            //                     button.disabled = false;
+            //                 }
+            //             };
+            //         }).catch(error => {
+            //             console.error('Error playing audio:', error);
+            //             isPlaying = false; // reset flag to false if there was an error playing the audio
+            //         });
+            //     })
+            //     .catch(error => {
+            //         console.error('Error converting text to speech:', error);
+            //     });
+            // }
+
+            // for (var i = 0; i < playButtons.length; i++) {
+            //     playButtons[i].addEventListener('click', () => {
+            //         // find next p element's text and set it as text 
+            //         const text = event.target.nextElementSibling.innerText;
+            //         console.log(text)
+            //         playAudio(text);
+            //     });
+            // }
+
+        });
+    </script><!-- Close internal javascript -->
+    
+        <div id="main_submit">
+            <p class="text-center">
+                <input type="submit" id="submitButton" class="btn btn-primary" value="Submit" /> 
+            </p>
+        </div>
+    </form>
+    <script language="Javascript">turkSetAssignmentID();</script>
+    
+    </body></html>
+    

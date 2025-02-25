@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HIT</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+        <script src="https://kit.fontawesome.com/ad6e983edc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.0.3/distribute/nouislider.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/nouislider@14.0.3/distribute/nouislider.min.js"></script>
+
+    </head>
+    
+    <body>
+        <form onsubmit="return confirm('Thanks. Please click OK to confirm your answer!');" name="mturk_form" method="post" id="mturk_form" action="https://www.mturk.com/mturk/externalSubmit">
+            <input type="hidden" value="" name="assignmentId" id="assignmentId" />
+            
+            <!-- HIT template: WebsiteDataCollection-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+            <!-- HIT template: Sentiment-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+     
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
+    
+        <p>&nbsp;</p>
+        <section class="container" id="Sentiment">
+        <!-- Instructions (collapsible) -->
+    
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+                    <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Instructions</strong> 
+                        <span class="collapse-text">(Click to expand)</span> 
+                    </a>
+                  
+                    <div class="panel-body" id="instructionBody">
+
+                        <div class="alert-info ">
+                            <ol>
+                                <li>
+                                    <b>Read what the user says and then read the response(s).</b>
+                                </li>
+                                <li>
+                                    <b>Answer the survey.</b>
+                                    <ul>
+                                        <li>
+                                            Multiple choice questions are mandatory while freeform questions are optional.
+                                        </li>
+                                        <li>
+                                            These questions are designed to evaluate the suitability of written responses. 
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End instructions --><!-- Categorization Layout -->
+    
+        <div class="row" id="workContent">
+    
+            
+            
+            <div class="container-fluid">
+
+                <div class="row d-flex align-items-stretch">
+                  <!-- Chat section (70%) -->
+                  <div class="col-7">
+                    <div class="card h-100">
+                      <div id="chat-window" class="card-body">
+                        <!-- user message -->
+                        <div class="card mt-2 mr-auto chat-message chat-message-left">
+                          <div class="card-header chat-header">
+                            User
+                          </div>
+                          
+                          <div class="card-body">
+                            <p class="card-text ">${instruction}</p>
+                          </div>
+                        </div>
+                        <!-- response messages -->
+
+                      </div>
+                    </div>
+
+
+                    <div class="hidden" id="responses">
+                        ${responses}
+                        <!-- [{\"model\": \"ground_truth\", \"text\": [\"EDM is short for electronic dance music. It is a genre that is made up or electronic musical melodies and is sometimes referred to as club or dance music.\"], \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/75d073c8ca17038f18aafa21fa79f7bc3735e4f2_instruction.mp3\", \"order\": 0}, {\"model\": \"gpt-3.5-turbo\", \"text\": [\"EDM stands for Electronic Dance Music, which is a genre of music that encompasses a wide range of electronic music styles, such as techno, house, trance, dubstep, trap, drum and bass, and more. It is characterized by its high tempo beats, synthesizers, and electronic production techniques, and is often played at clubs and festivals around the world.\"], \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/75d073c8ca17038f18aafa21fa79f7bc3735e4f2_instruction.mp3\", \"order\": 2}, {\"model\": \"gpt-4\", \"text\": [\"EDM stands for Electronic Dance Music, a genre of music that is primarily produced for nightclubs, raves, and festivals using electronic instruments, digital audio workstations, and sequencers. It encompasses a wide range of sub-genres, including house, techno, trance, dubstep, and drum and bass. EDM is characterized by its repetitive beats, synthesized sounds, and focus on creating a danceable rhythm.\"], \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/75d073c8ca17038f18aafa21fa79f7bc3735e4f2_instruction.mp3\", \"order\": 1}] -->
+                        <!-- single response test data -->
+                        <!-- [{\"model\": \"ground_truth\", \"text\": \"EDM is short for electronic dance music. \\nIt is a genre that is made up or electronic musical melodies and is sometimes referred to as club or dance music.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/75d073c8ca17038f18aafa21fa79f7bc3735e4f2_response.mp3\"}] -->
+                    </div>
+
+
+                  </div>
+                  <!-- Feedback section (30%) -->
+                <div class="col-5 " id="survey-pane">
+                    <div class="card h-100">
+                        <div class="card-body" id="survey-window">
+
+
+                            <!-- Feedback textarea -->
+                            <div class="question-div">
+                                <h4>Feedback/ideas on what to ask/annotate</h4>
+                                <textarea id="annotation_feedback" name="annotation_feedback" class="form-control" rows="3"></textarea>
+                            </div>
+
+                            <div class="question-div">
+                                <h4>Feedback/ideas on interface</h4>
+                                <textarea id="interface_feedback" name="interface_feedback" class="form-control" rows="3"></textarea>
+                            </div>
+
+                            <div class="question-div">
+                                <h4>Other feedback</h4>
+                                <textarea id="other_feedback" name="other_feedback" class="form-control" rows="3"></textarea>
+                            </div>
+                            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+        </section>
+    
+    <!-- End Categorization Layout --><!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+    
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
+    
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+    
+    #collapseTrigger{
+        color:#fff;
+        display: block;
+        text-decoration: none;
+    }
+    .chat-message{
+        width: 70%;
+    }
+
+    #submitButton{
+        white-space: normal;
+    }
+    #instructionBody table{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    #instructionBody table caption{
+        text-align: left;
+        padding: 0 0 5px 0;
+    }
+    #Inputs{
+        display: block;
+        margin-top: 10px;
+    }
+    .content{
+        margin-bottom: 15px;
+    }
+    .radio:first-of-type{
+        margin-top: -5px;
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
+    #main_submit{
+        margin-top: 20px;
+    }
+
+
+    mysection_yesno {
+                display: flex;
+                flex-flow: row wrap;
+            justify-content: center;
+            }
+
+            mysection_yesno > div {
+                padding: 0.5rem;
+
+            }
+            #yesnodiv{
+                width: 100%; 
+            }
+
+            #yesnoquestion{
+                height: 100%;
+                width: 100%;
+            }
+
+            input[type=radio] {
+                display: none;
+            }
+
+            input[type=radio]:not(:disabled) ~ label {
+                cursor: pointer;
+            }
+
+            input[type=radio]:disabled ~ label {
+                color: #bcc2bf;
+                border-color: #bcc2bf;
+                box-shadow: none;
+                cursor: not-allowed;
+            }
+
+            label {
+                height: 85px;
+                background: white;
+                border: 2px solid #cecece;
+                width: 45%; 
+                border-radius: 20px;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+                position: relative;
+                font-size: 90%;
+				display: flex !important;
+              justify-content: center;
+              align-content: center;
+              flex-direction: column;
+            }
+
+            input[type=radio]:checked + label {
+                background: #cecece;
+                color: white;
+                box-shadow: 0px 0px 20px #cecece;
+            }
+
+            input[type=radio]:checked + label::after {
+                color: #3d3f43;
+                font-family: FontAwesome;
+                border: 2px solid #cecece;
+                content: "";
+                font-size: 24px;
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                background: white;
+                box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+            }
+
+
+            input[type=radio]:checked + label #special-text .special-text2 {
+                background-color: transparent;
+            }
+
+            input[type=radio]:checked + label #special-text .special-text3 {
+                background-color: transparent;
+            }
+
+            .special-text2{
+                background-color:#FEFC8C;
+            }
+
+            .special-text3{
+                background-color:#8cd0fe;
+            }
+
+            input[type=radio]:checked + label {
+                background: #5487ff;
+                border-color: #5487ff;
+                color: white;
+                opacity: 100%;
+            }
+
+            /* limit height of survey-window */
+            #survey-window {
+                padding: 0; 
+                max-height: 80vh;
+                overflow-y: scroll;
+            }
+
+            .question-div {
+                padding: 10px; 
+            }
+
+    </style>
+    <!-- Close internal style sheet -->
+    
+    <!-- External JS references -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- Open internal javascript -->
+    <script>
+
+        $(document).ready(function() {
+            // Instructions expand/collapse
+            var content = $('#instructionBody');
+            var trigger = $('#collapseTrigger');
+            // content.hide();
+            $('.collapse-text').text('(Click to collapse)');
+            trigger.click(function(){
+                content.toggle();
+                var isVisible = content.is(':visible');
+                if(isVisible){
+                    $('.collapse-text').text('(Click to collapse)');
+                }else{
+                    $('.collapse-text').text('(Click to expand)');
+                }
+            });
+            // end expand/collapse
+
+            var responses_text = $('#responses').text();
+            responses_text = responses_text.replace(/\\([^n])/mg, "$1");
+            var responses_data = JSON.parse(responses_text)
+            // replace new lines with <br> 
+            for (var i=0; i < responses_data.length; i++) {
+                responses_data[i]['text'] = responses_data[i]['text'].replace(/(?:\r\n|\r|\n)/g, '<br>');
+            }
+
+            function createResponseCard(responseNumber, responseText) {
+                var card = $(
+                    `<div class="card mt-2 ml-auto chat-message chat-message-right">
+                        <div class="card-header chat-header">
+                        </div>
+                        <div class="card-body">
+                        <p class="card-text response-text"></p>
+                        </div>
+                    </div>`
+                );
+                
+                card.find('.card-header').prepend("Response " + responseNumber);
+                card.find('.response-text').html(responseText);
+
+                $('#chat-window').append(card);
+            }
+
+
+            const n_responses = responses_data.length
+            // reorder in ascending order according to response['order']
+            responses_data.sort((a, b) => {
+                return a['order'] - b['order'];
+            });
+
+            let promises = [] 
+            for (var i=0; i < n_responses; i++) {
+                var responseNumber = i+1; 
+                var responseText = responses_data[i]['text'];
+                var audioUrl = responses_data[i]['audio_url'];
+
+                var card = createResponseCard(responseNumber, responseText);
+            }
+            setupLoadedMessages();
+
+            function createQuestion(question) {
+                var question = $(
+                    `<h4 class="question alert-warning">
+                        |question|
+                    </h4>`.replace('|question|', question)
+                );
+                return question;
+            }
+
+            function createOption(class_, name, id, value, labelText, subtext) {
+                var option = $(
+                    `<div id="yesnodiv">
+                        <input type="radio" class="|class_| radio_buttons" id="|id|" name="|name|" value="|value|">
+                        <label for="|id|" id="yesnoquestion">
+                            <span style="font-size: 15px"> |labelText| </span>
+                            <p id="special-text" style="font-weight: normal;">
+                                |subtext|
+                            </p>
+                        </label>
+                    </div>`
+                    .replace('|class_|', class_)
+                    .replace('|name|', name)
+                    .replace('|id|', id)
+                    .replace('|id|', id)
+                    .replace('|value|', value)
+                    .replace('|labelText|', labelText)
+                    .replace('|subtext|', subtext)
+                );
+                return option;
+            }
+
+            function createOptions(options_data, name) {
+                var options = $('<mysection_yesno class="survey-options"></mysection_yesno>');
+                for (var i=0; i< options_data.length; i++) {
+                    var option = createOption("radio" + (i+1), name, name + "_" + (i+1), value=options_data[i]['labelText'], labelText=options_data[i]['labelText'], subtext=options_data[i]['subtext']);
+                    options.append(option);
+                }
+                return options; 
+            }
+
+            function createPreferenceOptions(name){
+                var options = $('<mysection_yesno class="survey-options"></mysection_yesno>');
+                for (var responseNumber=1; responseNumber< n_responses+1; responseNumber++) {
+                    var option = createOption("radio" + responseNumber, name, name + "_" + responseNumber, value=responseNumber, labelText=responseNumber, subtext="");
+                    options.append(option);
+                }
+                return options;
+            }
+
+            var single_response_survey = [
+                {
+                    "question": "Is the response helpful?",
+                    "alias": "helpful",
+                    "options": [
+                        {
+                            "labelText": "Not helpful",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Somewhat helpful",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Helpful", 
+                            "subtext": ""
+                        }, 
+                        {
+                            "labelText": "Very helpful",
+                            "subtext": ""
+                        }
+                    ]
+
+                }, 
+                {
+                    "question": "How would you rate the length of the response?",
+                    "alias": "length", 
+                    "options": [
+                        {
+                            "labelText": "Too short",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Short",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Good", 
+                            "subtext": ""
+                        }, 
+                        {
+                            "labelText": "Long",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Too long",
+                            "subtext": ""
+                        }
+                    ]
+                }, 
+                {
+                    "question": "Is the response relevant?", 
+                    "alias": "relevance", 
+                    "options": [
+                        {
+                            "labelText": "Not relevant",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Somewhat relevant",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Relevant", 
+                            "subtext": ""
+                        }, 
+                    ]
+                },
+                {
+                    "question": "Is the response accurate?",
+                    "alias": "accuracy",
+                    "options": [
+                        {
+                            "labelText": "Not accurate",
+                            "subtext": "Mostly false information."
+                        },
+                        {
+                            "labelText": "Contains errors",
+                            "subtext": "It contains some false information."
+                        },
+                        {
+                            "labelText": "Accurate", 
+                            "subtext": "It contains mostly true information."
+                        }, 
+                    ]
+                }, 
+                {
+                    "question": "Is the response easy to understand?",
+                    "alias": "understand", 
+                    "options": [
+                        {
+                            "labelText": "Difficult",
+                            "subtext": "Could not understand the main message."
+                        },
+                        {
+                            "labelText": "Somewhat",
+                            "subtext": "Understood the main message but some parts were difficult to understand."
+                        },
+                        {
+                            "labelText": "Easy", 
+                            "subtext": "Everything was clear."
+                        }, 
+                    ]
+                }, 
+                {
+                    "question": "Is the response informative?",
+                    "alias": "informative", 
+                    "options": [
+                        {
+                            "labelText": "Poor",
+                            "subtext": "The response is not informative."
+                        },
+                        {
+                            "labelText": "Fair",
+                            "subtext": "The response has some information."
+                        },
+                        {
+                            "labelText": "Good",
+                            "subtext": "The response contains important information."
+                        },
+                        {
+                            "labelText": "Excellent",
+                            "subtext": "The response contains all necessary information."
+                        },
+                        {
+                            "labelText": "Too much", 
+                            "subtext": "The response contains too much information."
+                        }
+                    ]
+                }
+
+            ]
+            
+            var multi_response_survey = [
+                {   
+                    "question": "Which response was the overall best answer?",
+                    "alias": "overall"
+                },
+                {
+                    "question": "Which response was the most suitable in terms of length?",
+                    "alias": "length"
+                }, 
+                {
+                    "question": "Which response was the most relevant?",
+                    "alias": "relevance"
+                }, 
+                {
+                    "question": "Which response was the most informative?",
+                    "alias": "informative"
+                },
+                {
+                    "question": "Which response was the easiest to understand?",
+                    "alias": "understand"
+                }, 
+                {
+                    "question": "Which response was the most natural?",
+                    "alias": "natural"
+                }
+            ]
+
+            // create survey questions
+            // multi-response setting
+            if (n_responses > 1) {
+                console.log("create preference questions for multi-response setting")
+                for (var i=multi_response_survey.length-1; i > -1 ; i--) {
+                    var question = multi_response_survey[i]['question'];
+                    var alias = multi_response_survey[i]['alias'];
+                    var question = createQuestion(question);
+                    var options = createPreferenceOptions(alias);
+
+                    var question_div = $('<div class="question-div"></div>');
+                    question_div.append(question);
+                    question_div.append(options);
+
+                    $('#survey-window').prepend(question_div);
+                }
+            }
+            // single-response setting 
+            else {
+                console.log("create single-response questions")
+                for (var i=single_response_survey.length-1; i > -1 ; i--) {
+                    var question = single_response_survey[i]['question'];
+                    var alias = single_response_survey[i]['alias'];
+                    var options_data = single_response_survey[i]['options'];
+                    console.log(options_data)
+
+                    var question = createQuestion(question);
+                    var options = createOptions(options_data, alias);
+
+                    var question_div = $('<div class="question-div"></div>');
+                    question_div.append(question);
+                    question_div.append(options);
+                    $('#survey-window').prepend(question_div);
+                }
+            }
+
+            // TODO click in radio button, scroll to next question 
+            //  find all radio inputs 
+            $('.radio_buttons').on('click', function() {
+                var currentQuestionDiv = $(this).parent().parent().parent();
+                // height total of all previous .question-divs 
+                var prev_height = 0; 
+                var prev_question_divs = currentQuestionDiv.prevAll('.question-div');
+                prev_question_divs.each(function() {
+                    prev_height += $(this).innerHeight();
+                });
+
+                console.log($(this))
+                console.log(currentQuestionDiv)
+                $('#survey-window').animate({
+                    scrollTop: currentQuestionDiv.innerHeight()  + prev_height
+                }, 500);
+
+                console.log(currentQuestionDiv.innerHeight())
+                console.log(prev_height)
+            });
+            
+    
+
+            let isPlaying = false; 
+
+
+            function toggleAllOtherPlayButtons(playButton) {
+                var playButtons = document.querySelectorAll('.playButton');
+
+                for (var i = 0; i < playButtons.length; i++) {
+                    if (playButtons[i] != playButton) {
+                        if (playButtons[i].disabled){
+                            playButtons[i].disabled = false;
+                        } else {
+                            playButtons[i].disabled = true;
+                        }
+                    }
+                }
+            }
+
+            function setupLoadedMessages(){
+                
+                var cards = document.querySelectorAll('.chat-message')
+
+                // extract all the card messages until a card with a card-header text as "user"
+                var latestUserCardIdx = -1;
+                for (var i = 0; i < cards.length; i++) {
+                    if (cards[i].querySelector('.card-header').textContent.includes('User')) {
+                        latestUserCardIdx = i;
+                    }
+                }
+                var responseCards = Array.from(cards).slice(latestUserCardIdx + 1);
+
+                // reorder responseCards based on card-header text 
+                responseCards.sort((a, b) => {
+                    var a_text = a.querySelector('.card-header').textContent;
+                    var b_text = b.querySelector('.card-header').textContent;
+                    var a_num = parseInt(a_text.replace('Response ', ''));
+                    var b_num = parseInt(b_text.replace('Response ', ''));
+                    return a_num - b_num;
+                });
+
+                // append responseCards to chat-window (reorders them without creating duplicates)
+                responseCards.forEach((card) => {
+                    $('#chat-window').append(card);
+                });
+
+                cards.forEach((card) => {
+                    $(card).removeClass('hidden')
+                }); 
+
+            }
+
+            function disableButton(name) {
+                document.getElementById(name).disabled = true;
+            }
+
+            function enableButton(name) {
+                document.getElementById(name).disabled = false;
+            }
+
+            function ensureOneChecked(name) {
+                var elems = document.getElementsByName(name);
+                var okay = false;
+                for (var i = 0, l = elems.length; i < l; i++) {
+                    if (elems[i].checked) {
+                        okay = true;
+                        break;
+                    }
+                }
+                return okay;
+            }
+
+            disableButton('submitButton');
+
+            function maybeEnableSubmit() {
+                // get all names of radio elements
+                var names = [];
+                var elems = document.getElementsByTagName('input');
+                for (var i = 0, l = elems.length; i < l; i++) {
+                    if (elems[i].type === 'radio') {
+                        names.push(elems[i].name);
+                    }
+                }
+
+                // check if all radio elements have been checked
+                enable = true;
+                for (var i = 0; i < names.length; i++) {
+                    if (!ensureOneChecked(names[i])) {
+                        enable = false;
+                        console.log("not checked: " + names[i])
+                    }
+                }
+                if (enable){
+                    enableButton('submitButton');
+                }
+            }
+
+            // add maybeEnableSubmit to all radio buttons
+            var radioButtons = document.getElementsByClassName('radio_buttons');
+            for (var i = 0; i < radioButtons.length; i++) {
+                radioButtons[i].addEventListener('click', () => {
+                    maybeEnableSubmit();
+                });
+            }
+
+        });
+    </script><!-- Close internal javascript -->
+    
+        <div id="main_submit">
+            <p class="text-center">
+                <input type="submit" id="submitButton" class="btn btn-primary" value="Submit" /> 
+            </p>
+        </div>
+    </form>
+    <script language="Javascript">turkSetAssignmentID();</script>
+    
+    <!-- Do no the remove the following line. It will be used to insert MTurk answers when done: -->
+    <!-- __ANSWERS__ -->
+    
+    </body></html>
+    

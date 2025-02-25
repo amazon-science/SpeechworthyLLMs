@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HIT</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+        <script src="https://kit.fontawesome.com/ad6e983edc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.0.3/distribute/nouislider.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/nouislider@14.0.3/distribute/nouislider.min.js"></script>
+
+    </head>
+    
+    <body>
+        <form onsubmit="return confirm('Thanks. Please click OK to confirm your answer!');" name="mturk_form" method="post" id="mturk_form" action="https://www.mturk.com/mturk/externalSubmit">
+            <input type="hidden" value="" name="assignmentId" id="assignmentId" />
+     
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
+    
+        <p>&nbsp;</p>
+        <section class="container" id="voicellm">
+        <!-- Instructions (collapsible) -->
+    
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-12">
+                <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+                    <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Instructions</strong> 
+                        <span class="collapse-text">(Click to expand)</span> 
+                    </a>
+                  
+                    <div class="panel-body" id="instructionBody">
+
+                        <div class="alert-info ">
+                            <ol>
+                                <li class="alert-danger">
+                                    Your answers will be carefully monitored for quality purposes and you may get blocked for all future tasks from us if we detect poor quality annotations. 
+                                </li>
+                                <li>
+                                    <b>You are given a set of two tasks, shown one at a time. </b>
+                                </li>
+                                <li>
+                                    <b>Listen to or read conversations presented to you side by side assuming you are the "User" interacting with a digital assistant (e.g. ChatGPT for text and Siri/Alexa for audio).</b>
+                                    <ul>
+                                        <li>
+                                            If the interaction is with audio, the header for each message will turn green after the audio has completed playing. 
+                                        </li>
+                                        <li>
+                                            A survey will only show after listening to the user utterance and the responses. 
+                                        </li>
+                                    </ul> 
+                                </li>
+                                <li>
+                                    <b>Answer the survey.</b>
+                                    <ul>
+                                        <li>
+                                            All questions are mandatory except for those marked as (optional). 
+                                        </li>
+                                        <li>
+                                            The next button (if you are on the first task) or the submit button (if you are on the second task) will be enabled after all mandatory questions have been answered, i.e. multiple choice questions have been clicked and freeform textboxes have been filled in. 
+                                        </li>
+                                        <li  class="alert-danger">
+                                            <b>Ignore</b> any inconveniences of this interface itself when answering the questions. (i.e. having to click on more play buttons should not be a reason to prefer the single-turn response over the multi-turn response)
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End instructions --><!-- Categorization Layout -->
+    
+        <div class="row" id="workContent">
+    
+            <div class="hidden" id="data">
+                <!-- ${data} -->
+                [{\"instruction\": \"Who was Henry Ford?\", \"context\": \"\", \"response\": \"Henry Ford (July 30, 1863 - April 7, 1947) was an American industrialist and business magnate. He was the founder of Ford Motor Company, and chief developer of the assembly line technique of mass production. Ford created the first automobile that middle-class Americans could afford, and his conversion of the automobile from an expensive luxury into an accessible conveyance profoundly impacted the landscape of the 20th century.\\n\\nFord was born on a farm in Michigan's Springwells Township to a Belgian family, leaving home at age 16 to work in Detroit. It was a few years before this time that Ford first experienced automobiles, and throughout the later half of the 1880s, Ford began repairing and later constructing engines, and through the 1890s worked with a division of Edison Electric. He officially founded Ford Motor Company in 1903, after prior failures in business but success in constructing automobiles.\\n\\nFord's 1908 introduction of the Model T automobile revolutionized both transportation and American industry. As the Ford Motor Company sole owner, he became one of the richest and best-known people in the world. He is credited with 'Fordism', the mass production of inexpensive goods coupled with high wages for workers. Ford was also among the pioneers of the five-day work week. Ford had a global vision, with consumerism as the key to peace. His intense commitment to systematically lowering costs resulted in many technical and business innovations, including a franchise system that put dealerships throughout North America and major cities on six continents.\\n\\nFord was widely known for his pacifism during the first years of World War I. In the 1920s Ford promoted antisemitic content through his newspaper The Dearborn Independent, and the book, The International Jew. After his son Edsel died in 1943, Ford resumed control of the company but was too frail to make decisions and quickly came under the control of subordinates. He turned over the company to his grandson Henry Ford II in 1945. He died in 1947 after leaving most of his wealth to the Ford Foundation, and control of the company to his family.\", \"category\": \"general_qa\", \"gpt-3.5-turbo-response\": \"Henry Ford was an American industrialist and founder of the Ford Motor Company. He is credited with revolutionizing the automobile industry by mass-producing the Model T car and creating the assembly line process of manufacturing. He also pioneered the concept of paying workers a fair wage and introducing employee benefits such as healthcare and retirement plans. Additionally, Ford was known for his philanthropy and involvement in social and political issues of his time. He died in 1947 at the age of 84.\", \"gpt-4-response\": \"Henry Ford was an American industrialist, entrepreneur, and business magnate, best known for founding the Ford Motor Company in 1903 and developing the assembly line technique of mass production. He revolutionized the automobile industry by making cars more affordable and accessible for the average American consumer. Born on July 30, 1863, in Greenfield Township, Michigan, Ford played a significant role in shaping the economic and social landscape of the 20th century. His innovations in the automotive industry contributed to the growth of the American economy and the development of the modern consumer culture.\", \"instruction_audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_instruction.mp3\", \"response_audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_response.mp3\", \"gpt-3.5-turbo-response_audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_gpt-3.5-turbo-response.mp3\", \"gpt-4-response_audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_gpt-4-response.mp3\", \"decomposed-gpt-4-response\": [{\"text\": \"Who was Henry Ford?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_0.mp3\"}, {\"text\": \"Henry Ford was an American industrialist, entrepreneur, and business magnate.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_1.mp3\"}, {\"text\": \"What is he most known for?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_2.mp3\"}, {\"text\": \"He is best known for founding the Ford Motor Company in 1903 and developing the assembly line technique of mass production.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_3.mp3\"}, {\"text\": \"What impact did he have on the automobile industry?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_4.mp3\"}, {\"text\": \"He revolutionized the automobile industry by making cars more affordable and accessible for the average American consumer.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_5.mp3\"}, {\"text\": \"When and where was Henry Ford born?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_6.mp3\"}, {\"text\": \"He was born on July 30, 1863, in Greenfield Township, Michigan.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_7.mp3\"}, {\"text\": \"How did Henry Ford\\u2019s innovations impact the 20th century?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_8.mp3\"}, {\"text\": \"Ford played a significant role in shaping the economic and social landscape of the 20th century. His innovations in the automotive industry contributed to the growth of the American economy and the development of the modern consumer culture.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/91385066c888b0454deebf0ca4a3f37be61f7b21_9.mp3\"}], \"set_type\": \"text\", \"conv_type\": \"single_turn\"}, {\"instruction\": \"What are five totally distinct, creative ways to describe the usefulness of the police?\", \"context\": \"\", \"response\": \"1. The police serve as a 'watchful guardian' to keep us safe.\\n2. The police are a 'protector of the law' who protects us from harm.\\n3. The police are an 'impartial enforcer' of the law.\\n4. The police are an 'intermediary of justice' who helps us get justice.\\n5. The police are a 'counselor of the law' who helps us understand the law.\", \"category\": \"brainstorming\", \"gpt-3.5-turbo-response\": \"1. Guardians of Law and Order: The police are the protectors of our society's safety and they ensure that the laws are upheld. They are like the guardians who keep an eye on us and make sure that we are living a law-abiding life.\\n\\n2. Peacekeepers: The police are the peacemakers who maintain law and order in society. They are responsible for ensuring that everyone can live in peace and harmony, without fear of any disruption or violence.\\n\\n3. Crisis Responders: When there is a crisis, emergency, or any kind of danger to the community, the police step in to safeguard and protect. They are always ready to respond and act quickly to ensure the safety of the public.\\n\\n4. Community Helpers: The police are not just law enforcement officers, but also community helpers. They work closely with people and listen to their problems, and offer guidance and support to those in need. This helps to build trust and mutual respect between law enforcement and the community.\\n\\n5. Role Models: The police serve as role models for society, inspiring people to follow the law, contribute positively to the community, and work towards a better future. By maintaining ethical standards and upholding the law, they set an example for all citizens to emulate.\", \"gpt-4-response\": \"1. Law Enforcement Artisans: The police are like masterful artisans who sculpt the society with an unseen chisel of law and order. They mold a world where inhabitants feel safe and protected, enabling the community to prosper and develop in peace.\\n\\n2. Guardians of Civilization: They serve as the unyielding guardians of our civilization, ensuring that the rules and regulations which act as the building blocks of our society are upheld. They protect the integrity of our culture and national heritage, acting as a shield against chaos and anarchy.\\n\\n3. Wise Eagles: Just as an eagle watches over its territory from great heights, police observe and oversee cities and villages, using their trained eyes to spot any disturbances. Their invaluable perspective helps maintain stability while their swift action ensures safety for all below.\\n\\n4. Social Medics: Police can be likened to doctors in the realm of social health. Like surgeons who remove malignant tumors to protect the body, they extract elements of crime and unrest to safeguard the luminous life of society, healing rifts and mending wounds inflicted by antisocial elements.\\n\\n5. Engineers of Trust: They work consistently like diligent engineers who build bridges of trust between the people and the system. They act as a vital link, ensuring that faith in the judicial and administrative framework remains intact and that justice is not derailed.\", \"instruction_audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_instruction.mp3\", \"response_audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_response.mp3\", \"gpt-3.5-turbo-response_audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_gpt-3.5-turbo-response.mp3\", \"gpt-4-response_audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_gpt-4-response.mp3\", \"decomposed-gpt-4-response\": [{\"text\": \"What are five totally distinct, creative ways to describe the usefulness of the police?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_0.mp3\"}, {\"text\": \"A distinct way of viewing their usefulness is considering them as 'Law Enforcement Artisans'. They skillfully apply law and order much like an artisan sculpting a masterpiece. Their efforts result in a peaceful and secure society where people can thrive.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_1.mp3\"}, {\"text\": \"Can you cite another creative description?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_2.mp3\"}, {\"text\": \"Certainly. Think of the police as the 'Guardians of Civilization.' They care for our society by ensuring adherence to rules and regulations. They act as a protective shield against chaos, thus maintaining the integrity of our culture.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_3.mp3\"}, {\"text\": \"Can you suggest a third way to describe their importance using the nature metaphor?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_4.mp3\"}, {\"text\": \"Yes, imagine the police as 'Wise Eagles.' Eagles continually survey their territory from high, detecting any form of threat. Similarly, the police keep a keen eye over cities and villages, spotting and addressing disturbances to keep the society stable.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_5.mp3\"}, {\"text\": \"Is there another way to describe their role in relation to social health?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_6.mp3\"}, {\"text\": \"Yes, they can be regarded as 'Social Medics.' Like medics remove elements causing diseases in a body, they remove elements causing social unrest. They work to heal societal wounds inflicted by such elements, thus achieving community welfare.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_7.mp3\"}, {\"text\": \"Finally, can you offer another unique description tying their role to trust within a society?\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_8.mp3\"}, {\"text\": \"Sure. You can think of police as 'Engineers of Trust.' They undertake persistent efforts to build bridges of trust between the citizens and the system. They establish faith in the justice system and ensure that it is never derailed.\", \"audio_url\": \"https://d2zzmiygasj3dp.cloudfront.net/8f25cce8e9a04737a55e6d8422793117159af60a_9.mp3\"}], \"set_type\": \"text\", \"conv_type\": \"multi_turn\"}]
+
+<!-- [{"instruction": "What are your three favorite Martin Scorsese  films", "context": "", "response": "1. The Departed\n2. GoodFellas\n3. Casino", "category": "brainstorming", "gpt-3.5-turbo-response": "As an AI language model, I do not have personal preferences. However, here are three of the most critically acclaimed and highly regarded films directed by Martin Scorsese:\n\n1. Goodfellas (1990)\n2. Taxi Driver (1976)\n3. Raging Bull (1980)", "gpt-4-response": "As an AI language model, I do not have personal preferences. However, here are three highly praised and influential films by Martin Scorsese:\n\n1. Goodfellas (1990) - This crime film, based on Nicholas Pileggi's book 'Wiseguy,' chronicles the rise and fall of mobster Henry Hill (Ray Liotta) and his criminal associates in the Mafia.\n\n2. Taxi Driver (1976) - Starring Robert De Niro as a mentally unstable Vietnam War veteran, Travis Bickle, the film explores themes of loneliness, urban decay and vigilantism set in a gritty, crime-ridden New York City.\n\n3. Raging Bull (1980) - A biographical sports drama film based on the life of boxer Jake LaMotta, played by Robert De Niro. The film is known for its powerful performances, stunning black-and-white cinematography, and its exploration of the dark side of ambition, jealousy, and self-destruction.", "instruction_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/2468b2e20835e6a82e635d97a3e4729ef2404e70_instruction.mp3", "response_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/2468b2e20835e6a82e635d97a3e4729ef2404e70_response.mp3", "gpt-3.5-turbo-response_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/2468b2e20835e6a82e635d97a3e4729ef2404e70_gpt-3.5-turbo-response.mp3", "gpt-4-response_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/2468b2e20835e6a82e635d97a3e4729ef2404e70_gpt-4-response.mp3", "decomposed-gpt-4-response": [{"text": "What are your three favorite Martin Scorsese films?", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/ab94d195fca7599aa2890829a6a359c7948493d6_0.mp3"}, {"text": "As an AI language model, I don't have personal favorites. But I can certainly mention three critically acclaimed films by Martin Scorsese.", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/ab94d195fca7599aa2890829a6a359c7948493d6_1.mp3"}, {"text": "Could you tell me about the first one?", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/ab94d195fca7599aa2890829a6a359c7948493d6_2.mp3"}, {"text": "Sure, the first one is \"Goodfellas,\" released in 1990. It's a crime film based on Nicholas Pileggi's book \"Wiseguy.\" The story chronicles the rise and fall of mobster Henry Hill, portrayed by Ray Liotta, along with his associates in the Mafia.", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/ab94d195fca7599aa2890829a6a359c7948493d6_3.mp3"}, {"text": "What about the second film?", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/ab94d195fca7599aa2890829a6a359c7948493d6_4.mp3"}, {"text": "The second film is \"Taxi Driver\" from 1976. The film stars Robert De Niro as Travis Bickle, a mentally disturbed Vietnam War Veteran. It explores themes such as loneliness, urban decay, and vigilantism in a crime-ridden New York City.", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/ab94d195fca7599aa2890829a6a359c7948493d6_5.mp3"}, {"text": "Which is the third film?", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/ab94d195fca7599aa2890829a6a359c7948493d6_6.mp3"}, {"text": "The third film is \"Raging Bull,\" a biographical sports drama released in 1980. It's based on the life of boxer Jake LaMotta, played by Robert De Niro. The film is acclaimed for its strong performances, its impressive black-and-white cinematography, and its exploration of the dark side of ambition, jealousy, and self-destruction.", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/ab94d195fca7599aa2890829a6a359c7948493d6_7.mp3"}], "set_type": "text", "conv_type": "single_turn"}, {"instruction": "Define Part of Speech", "context": "", "response": "In grammar, a part of speech or part-of-speech (abbreviated as POS or PoS, also known as word class or grammatical category) is a category of words (or, more generally, of lexical items) that have similar grammatical properties. Words that are assigned to the same part of speech generally display similar syntactic behavior (they play similar roles within the grammatical structure of sentences), sometimes similar morphological behavior in that they undergo inflection for similar properties and even similar semantic behavior. Commonly listed English parts of speech are noun, verb, adjective, adverb, pronoun, preposition, conjunction, interjection, numeral, article, and determiner.\n\nAlmost all languages have the word classes noun and verb, but beyond these two there are significant variations among different languages. For example:\n\nJapanese has as many as three classes of adjectives, where English has one.\nChinese, Korean, Japanese and Vietnamese have a class of nominal classifiers.\nMany languages do not distinguish between adjectives and adverbs, or between adjectives and verbs.\nBecause of such variation in the number of categories and their identifying properties, analysis of parts of speech must be done for each individual language. Nevertheless, the labels for each category are assigned on the basis of universal criteria", "category": "open_qa", "gpt-3.5-turbo-response": "Part of speech refers to the grammatical category to which a word belongs in a sentence. The most common parts of speech are nouns, verbs, adjectives, adverbs, pronouns, prepositions, conjunctions, and interjections. Each part of speech has its own unique function and plays a specific role in constructing sentences.", "gpt-4-response": "A part of speech is a category of words in a language that share similar grammatical properties. In English, there are eight traditional parts of speech: noun, pronoun, verb, adjective, adverb, preposition, conjunction, and interjection. Each part of speech plays a specific role in a sentence, helping to create meaning, structure, and coherence.", "instruction_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_instruction.mp3", "response_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_response.mp3", "gpt-3.5-turbo-response_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_gpt-3.5-turbo-response.mp3", "gpt-4-response_audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_gpt-4-response.mp3", "decomposed-gpt-4-response": [{"text": "Define Part of Speech", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_0.mp3"}, {"text": "A part of speech is a category of words in a language that share similar grammatical properties.", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_1.mp3"}, {"text": "How many parts of speech are traditionally recognized in English?", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_2.mp3"}, {"text": "In English, there are traditionally recognized eight parts of speech.", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_3.mp3"}, {"text": "What are these parts of speech?", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_4.mp3"}, {"text": "These are noun, pronoun, verb, adjective, adverb, preposition, conjunction, and interjection.", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_5.mp3"}, {"text": "What is the role of each part of speech?", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_6.mp3"}, {"text": "Each part of speech plays a specific role in a sentence, helping to create meaning, structure, and coherence.", "audio_url": "https://d2zzmiygasj3dp.cloudfront.net/9823b0a49f4d1b2f35c6b9cc522e7f3ef0be35b5_7.mp3"}], "set_type": "audio", "conv_type": "multi_turn"}] -->
+            </div>
+            
+            <div class="container-fluid annotation_set" id="annotation_set">
+
+                <div class="row d-flex align-items-stretch">
+                  <!-- Chat section (70%) -->
+                    <div class="col-4" id="chat-pane">
+                        <div class="card h-100">
+                            <div id="chat-window" class="card-body chat-window-class">
+                                <!-- user message -->
+                                <!-- response messages -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                      <!-- Feedback section (30%) -->
+                    <div class="col-4 hidden" id="survey-pane">
+                    <!-- <div class="col-4 hidden" id="survey-pane"> -->
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5>Survey</h5>
+                            </div>
+
+                            <div class="card-body survey-window-class" id="survey-window">
+
+                                <div class="question-div">
+                                    <h5>If any, identify follow-up questions that were not suitable in the multi-turn conversation. Simply copy and paste these questions below. If none, type "None"</h5>
+                                    <textarea name="question-followup" class="form-control interface-feedback mandatory" rows="3"></textarea>
+                                </div>
+
+                                <div class="question-div">
+                                    <h5>How many turns are there in the multi-turn conversation? Count only the responses. Provide only the numerical value.</h5>
+                                    <textarea name="turn-count" class="form-control interface-feedback mandatory" rows="3"></textarea>
+                                </div>
+
+                                <div class="question-div">
+                                    <h5>(Optional) Any other feedback</h5>
+                                    <textarea name="other-feedback" class="form-control other-feedback optional" rows="3"></textarea>
+                                </div>
+                                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- add a "next" button that's center aligned -->
+                    <div class="col-12 next-button-pane">
+                        <button class="btn btn-primary" id="nextButton">Next</button>
+                    </div>
+                </div>
+            </div>    
+        </section>
+    
+    <!-- End Categorization Layout --><!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+    
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
+    
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+    
+    #collapseTrigger{
+        color:#fff;
+        display: block;
+        text-decoration: none;
+    }
+    .chat-message{
+        width: 90%;
+    }
+
+    #submitButton{
+        white-space: normal;
+    }
+    #instructionBody table{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    #instructionBody table caption{
+        text-align: left;
+        padding: 0 0 5px 0;
+    }
+    #Inputs{
+        display: block;
+        margin-top: 10px;
+    }
+    .content{
+        margin-bottom: 15px;
+    }
+    .radio:first-of-type{
+        margin-top: -5px;
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
+    .next-button-pane{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    #main_submit{
+        margin-top: 20px;
+    }
+
+    .chat-message-right > .card-header{
+        background-color: #5487ff;
+        color: white;
+    }
+
+    .chat-message-left > .card-header{
+        background-color: #5c5c5c;
+        color: white;
+    }
+
+
+    mysection_yesno {
+                display: flex;
+                /* flex-flow: row wrap; */
+                justify-content: center;
+            }
+
+            mysection_yesno > div {
+                padding: 0.5rem;
+
+            }
+            #yesnodiv{
+                width: 100%; 
+            }
+
+            #yesnoquestion{
+                height: 100%;
+                width: 100%;
+            }
+
+            input[type=radio] {
+                display: none;
+            }
+
+            input[type=radio]:not(:disabled) ~ label {
+                cursor: pointer;
+            }
+
+            input[type=radio]:disabled ~ label {
+                color: #bcc2bf;
+                border-color: #bcc2bf;
+                box-shadow: none;
+                cursor: not-allowed;
+            }
+
+            label {
+                height: 85px;
+                background: white;
+                border: 2px solid #cecece;
+                width: 45%; 
+                border-radius: 20px;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+                position: relative;
+                font-size: 90%;
+				display: flex !important;
+              justify-content: center;
+              align-content: center;
+              flex-direction: column;
+            }
+
+            input[type=radio]:checked + label {
+                background: #cecece;
+                color: white;
+                box-shadow: 0px 0px 20px #cecece;
+            }
+
+            input[type=radio]:checked + label::after {
+                color: #3d3f43;
+                font-family: FontAwesome;
+                border: 2px solid #cecece;
+                content: "";
+                font-size: 24px;
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                background: white;
+                box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+            }
+
+
+            input[type=radio]:checked + label #special-text .special-text2 {
+                background-color: transparent;
+            }
+
+            input[type=radio]:checked + label #special-text .special-text3 {
+                background-color: transparent;
+            }
+
+            .special-text2{
+                background-color:#FEFC8C;
+            }
+
+            .special-text3{
+                background-color:#8cd0fe;
+            }
+
+            input[type=radio]:checked + label {
+                background: #5487ff;
+                border-color: #5487ff;
+                color: white;
+                opacity: 100%;
+            }
+
+            /* limit height of survey-window */
+            .survey-window-class {
+                padding: 0; 
+                max-height: 80vh;
+                overflow-y: scroll;
+            }
+
+            .chat-window-class {
+                overflow-y: scroll; 
+                max-height: 80vh; 
+            }
+
+            .question-div {
+                padding: 10px; 
+            }
+
+    </style>
+    <!-- Close internal style sheet -->
+    
+    <!-- External JS references -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+    
+    <!-- Open internal javascript -->
+    <script>
+
+        $(document).ready(function() {
+
+            const multi_response_survey = [
+                {
+                    "question": "Which conversation would you prefer to have with a digital assistant?", 
+                    "alias": "overall"
+                },
+                {
+                    "question": "Which conversation was more engaging?",
+                    "alias": "engaging"
+                },
+                {   
+                    "question": "Which conversation was better for fully understanding the information provided in the responses?",
+                    "alias": "understanding"
+                },
+                // {
+                //     "question": "Which response was the most suitable in terms of length?",
+                //     "alias": "length"
+                // }, 
+                // {
+                //     "question": "Which response was the most relevant?",
+                //     "alias": "relevance"
+                // }, 
+                // {
+                //     "question": "Which response was the most informative?",
+                //     "alias": "informative"
+                // },
+                // {
+                //     "question": "Which response was the easiest to understand?",
+                //     "alias": "understand"
+                // }, 
+                // {
+                //     "question": "Which response was the most natural?",
+                //     "alias": "natural"
+                // }
+            ]
+
+            const single_response_survey = [
+                {
+                    "question": "Do the two conversations have the same information content?",
+                    "alias": "information",
+                    "options": [
+                        {
+                            "labelText": "Yes",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "No", 
+                            "subtext": ""
+                        }, 
+                    ]
+
+                }, 
+                {
+                    "question": "How suitable was the amount of information provided by the single-turn conversation?",
+                    "alias": "information_amount",
+                    "options": [
+                        {
+                            "labelText": "Too little / Insufficient",
+                            "subtext": ""
+                        },
+                        {
+                            "labelText": "Good / Sufficient", 
+                            "subtext": ""
+                        }, 
+                        {
+                            "labelText": "Too much", 
+                            "subtext": ""
+                        }
+                    ]
+
+                }
+            ]
+
+            function fetchAudio(url) {
+                return fetch(url)
+                    .then(response => response.blob())
+                    .then(blob => {
+                        return new Promise((resolve, reject) => {
+                            const reader = new FileReader();
+                            reader.onloadend = () => resolve(reader.result);
+                            reader.onerror = reject;
+                            reader.readAsDataURL(blob);
+                        });
+                    });
+            }
+
+            function createCard(audioUrl, text, message_type, set_type) {
+
+                var card = $(
+                    `<div class="card mt-2 ml-auto chat-message chat-message-right">
+                        <div class="card-header chat-header">
+                        <i class="btn-action fa-solid fa-eye-slash toggle-eye"></i>
+                        </div>
+                        <div class="card-body">
+                        <audio class="audioPlayer">
+                            <source src="|audio_url|" type="audio/mpeg">
+                        </audio>
+                        <button class="playButton">Play</button>
+                        <p class="card-text response-text hidden"></p>
+                        </div>
+                    </div>`.replace("|audio_url|", audioUrl)
+                );
+                
+                if (message_type == "user") {
+                    // make chat header blue 
+                    card.addClass('mr-auto'); 
+                    card.removeClass('ml-auto'); 
+                    card.addClass('chat-message-left');
+                    card.removeClass('chat-message-right');
+                    card.find('.card-header').prepend("User");
+                }
+                else if (message_type == "response") {
+                    card.addClass('chat-message-right');
+                    card.find('.card-header').prepend("Response");
+                }
+
+                card.find('.response-text').html(text);
+                setMessageType(card, set_type);
+
+                return card 
+            }
+
+            function setMessageType(message, set_type){
+                if (set_type == "audio"){
+                    // hide text
+                    message.find('.card-text').addClass('hidden');
+                }
+                else if (set_type == "text"){
+                    // hide audio player
+                    message.find('.audioPlayer').addClass('hidden');
+                    message.find('.playButton').addClass('hidden');
+                    // show text 
+                    message.find('.card-text').removeClass('hidden');
+                    // remove eye icon
+                    message.find('.toggle-eye').remove();
+                }
+            }
+
+            function createChatWindow(set_type, template, data, idx){
+                console.log("inside createChatWindow")
+                template.attr('id', 'chat-pane-' + idx);
+
+                template.find('#chat-window').attr('id', 'chat-window-' + idx);
+                
+                // create a copy of the survey window
+                // remove the existing one 
+                var chatWindow = template.find('#chat-window-' + idx);
+
+                // add header saying conversation idx 
+                var header = $('<h4 class="alert-info">Conversation ' + (idx+1) + '</h4>');
+                chatWindow.prepend(header);
+
+                console.log(data); 
+                for (var i=0; i < data.length; i++) {
+                // for (var i=0; i < 2; i++) {
+                    var message = data[i]['text'];
+                    var audioUrl = data[i]['audio_url'];
+                    
+                    // odd index is user message, even index is response message
+                    if (i % 2 == 0) {
+                        var message_type = "user";
+                    }
+                    else {
+                        var message_type = "response";
+                    } 
+                    card = createCard(audioUrl, message, message_type, set_type);
+                    console.log("Created card for message: " + message)
+                    chatWindow.append(card);
+                    console.log(chatWindow)
+                }
+
+                console.log(template)
+
+                return template;
+            }
+
+
+            // Instructions expand/collapse
+            var content = $('#instructionBody');
+            var trigger = $('#collapseTrigger');
+            // content.hide();
+            $('.collapse-text').text('(Click to collapse)');
+            trigger.click(function(){
+                content.toggle();
+                var isVisible = content.is(':visible');
+                if(isVisible){
+                    $('.collapse-text').text('(Click to collapse)');
+                }else{
+                    $('.collapse-text').text('(Click to expand)');
+                }
+            });
+            // end expand/collapse
+
+            var annotation_data_text = $('#data').text().trim();
+            // if annotation_data_text starts with ", remove it 
+            if (annotation_data_text[0] == '"'){
+                annotation_data_text = annotation_data_text.substring(1, annotation_data_text.length - 1);
+            }
+            annotation_data_text = annotation_data_text.trim(); 
+            console.log(annotation_data_text)
+            // annotation_data_text = annotation_data_text.replace('\"', '"')
+            annotation_data_text = annotation_data_text.replace(/\\([^n"])/mg, "$1");
+            // replace \\\" with '
+            annotation_data_text = annotation_data_text.replace(/\\\"/g, '"');
+            console.log(annotation_data_text)
+            var annotation_data = JSON.parse(annotation_data_text)
+            console.log(annotation_data)
+            const n_annotation_sets = annotation_data.length;
+
+
+            function createAnnotationSet(annotation_set_idx, template, questions_data){
+
+                if (annotation_set_idx == n_annotation_sets-1){
+                    template.find('.next-button-pane').remove();
+                }
+
+                questions_data["gpt-4-response"] = questions_data["gpt-4-response"].replace(/(?:\r\n|\r|\n)/g, '<br>'); 
+                for (var j=0; j < questions_data['decomposed-gpt-4-response'].length; j++){
+                    questions_data['decomposed-gpt-4-response'][j]['text'] = questions_data['decomposed-gpt-4-response'][j]['text'].replace(/(?:\r\n|\r|\n)/g, '<br>');
+                }
+
+                let sequences = [
+                    [
+                        {
+                            "text": questions_data['instruction'],
+                            "audio_url": questions_data['instruction_audio_url']
+                        }, 
+                        {
+                            "text": questions_data["gpt-4-response"],
+                            "audio_url": questions_data["gpt-4-response_audio_url"]
+                        }
+                    ],
+                ]
+
+                // order sequences 
+                if (questions_data['conv_type'] == "single_turn"){
+                    // add to end 
+                    sequences.push(questions_data['decomposed-gpt-4-response'])
+                }
+                else {
+                    // add to beginning
+                    sequences.unshift(questions_data['decomposed-gpt-4-response'])
+                }
+
+                var set_type = questions_data['set_type'];
+                // var annotation_set = $('#annotation_set');
+                console.log(template)
+                // remove annotation_set template
+
+                n_chats = sequences.length;
+                for (var i=n_chats-1; i > -1; i--){
+                    // clone template
+                    var chat_pane_template = template.find('#chat-pane').clone();    
+                    console.log(chat_pane_template)
+                    chatWindow = createChatWindow(set_type, chat_pane_template, sequences[i], i)
+                    console.log(chatWindow)
+                    // add to annotation_set child where class=row
+                    template.children('.row').prepend(chatWindow);
+                }
+                // remove template
+                template.find('#chat-pane').remove();
+
+
+                var n_responses = 2 
+
+                var survey_pane = template.find("#survey-pane");
+                var survey_window = template.find('#survey-window');
+                survey_window.attr('id', 'survey-window-' + annotation_set_idx);
+                createSurvey(n_responses, survey_window, annotation_set_idx); 
+
+                if (set_type == "text"){
+                    survey_pane.removeClass('hidden');
+                }   
+
+                // add idx to freeform feedback inputs id
+                // annotation_set.find('.annotation-feedback').attr('id', 'annotation-feedback_' + idx);
+                // annotation_set.find('.annotation-feedback').attr('name', 'annotation-feedback_' + idx);
+                // annotation_set.find('.interface-feedback').attr('id', 'interface-feedback_' + idx);
+                // annotation_set.find('.interface-feedback').attr('name', 'interface-feedback_' + idx);
+                // annotation_set.find('.other-feedback').attr('id', 'other-feedback_' + idx);
+                // annotation_set.find('.other-feedback').attr('name', 'other-feedback_' + idx);
+
+                // add annotation set to work 
+                $('#workContent').append(template);
+                
+                if (annotation_set_idx > 0){
+                    template.addClass('hidden');
+                }
+
+            }
+
+            for (var i=0; i < annotation_data.length; i++){
+                var annotation_set = $('#annotation_set').clone();
+                annotation_set.attr("id", "#annotation_set"+i); 
+                createAnnotationSet(i, annotation_set, annotation_data[i]);
+            }
+            $('#annotation_set').remove();          
+            
+            setupDynamicComponents();
+            
+
+            function createQuestion(question) {
+                var question = $(
+                    `<h5 class="question alert-warning">
+                        |question|
+                    </h5>`.replace('|question|', question)
+                );
+                return question;
+            }
+
+            function createOption(class_, name, id, value, labelText, subtext) {
+                var option = $(
+                    `<div id="yesnodiv">
+                        <input type="radio" class="|class_| radio_buttons" id="|id|" name="|name|" value="|value|">
+                        <label for="|id|" id="yesnoquestion">
+                            <span style="font-size: 15px"> |labelText| </span>
+                            <p id="special-text" style="font-weight: normal;">
+                                |subtext|
+                            </p>
+                        </label>
+                    </div>`
+                    .replace('|class_|', class_)
+                    .replace('|name|', name)
+                    .replace('|id|', id)
+                    .replace('|id|', id)
+                    .replace('|value|', value)
+                    .replace('|labelText|', labelText)
+                    .replace('|subtext|', subtext)
+                );
+                return option;
+            }
+
+            function createOptions(options_data, set_idx, name) {
+                var options = $('<mysection_yesno class="survey-options"></mysection_yesno>');
+                for (var i=0; i< options_data.length; i++) {
+                    var option = createOption("radio" + set_idx + "_" + (i+1), name + "_" + set_idx, name + "_" + set_idx + "_" + (i+1), value=options_data[i]['labelText'], labelText=options_data[i]['labelText'], subtext=options_data[i]['subtext']);
+                    options.append(option);
+                }
+                return options; 
+            }
+
+            function createPreferenceOptions(n_responses, set_idx, name){
+                var options = $('<mysection_yesno class="survey-options"></mysection_yesno>');
+                for (var responseNumber=1; responseNumber< n_responses+1; responseNumber++) {
+                    option_subname = "_" + set_idx + "_" + responseNumber
+                    var option = createOption("radio" +  option_subname, name + "_" + set_idx, name + "_" + option_subname, value=responseNumber, labelText=responseNumber, subtext="");
+                    options.append(option);
+                }
+                return options;
+            }
+
+
+
+            function createSurvey(n_responses, survey_window, set_idx){
+                // single-response setting 
+
+                console.log("create preference questions for multi-response setting")
+                for (var i=multi_response_survey.length-1; i > -1 ; i--) {
+                    var question = multi_response_survey[i]['question'];
+                    var alias = multi_response_survey[i]['alias'];
+                    var question = createQuestion(question);
+                    var options = createPreferenceOptions(n_responses, set_idx, alias);
+                    console.log(options)
+
+                    var question_div = $('<div class="question-div"></div>');
+                    question_div.append(question);
+                    question_div.append(options);
+                    
+                    survey_window.prepend(question_div);
+                }
+                
+                console.log("create single-response questions")
+                for (var i=single_response_survey.length-1; i > -1 ; i--) {
+                    var question = single_response_survey[i]['question'];
+                    var alias = single_response_survey[i]['alias'];
+                    var options_data = single_response_survey[i]['options'];
+                    console.log(options_data)
+
+                    var question = createQuestion(question);
+                    var options = createOptions(options_data, set_idx, alias);
+
+                    var question_div = $('<div class="question-div"></div>');
+                    question_div.append(question);
+                    question_div.append(options);
+                    survey_window.prepend(question_div);
+                }
+            }
+            //  find all radio inputs 
+            $('.radio_buttons').on('click', function() {
+                var currentQuestionDiv = $(this).parent().parent().parent();
+                // height total of all previous .question-divs 
+                var prev_height = 0; 
+                var prev_question_divs = currentQuestionDiv.prevAll('.question-div');
+                prev_question_divs.each(function() {
+                    prev_height += $(this).innerHeight();
+                });
+
+                console.log($(this))
+                console.log(currentQuestionDiv)
+                // find the survey window that contains the current question div
+                var survey_window = currentQuestionDiv.parent();
+                console.log(survey_window)
+                survey_window.animate({
+                    scrollTop: currentQuestionDiv.innerHeight()  + prev_height
+                }, 500);
+
+                console.log(currentQuestionDiv.innerHeight())
+                console.log(prev_height)
+            });
+            
+
+            let isPlaying = false; 
+
+
+            function toggleAllOtherPlayButtons(annotation_set, playButton) {
+                var playButtons = annotation_set.querySelectorAll('.playButton');
+
+                for (var i = 0; i < playButtons.length; i++) {
+                    if (playButtons[i] != playButton) {
+                        if (playButtons[i].disabled){
+                            playButtons[i].disabled = false;
+                        } else {
+                            playButtons[i].disabled = true;
+                        }
+                    }
+                }
+            }
+
+            function setupDynamicComponents(){
+                
+
+                annotation_sets = document.querySelectorAll('.annotation_set');
+                console.log(annotation_sets)
+
+                annotation_sets.forEach((annotation_set) => {
+                    var playButtons = annotation_set.querySelectorAll('.playButton');
+
+                    playButtons.forEach((playButton) => {
+                        const audioPlayer = playButton.previousElementSibling;
+
+                        audioPlayer.addEventListener('ended', () => {
+                            playButton.textContent = 'Play'; // Change the play button text
+                            // change card-header color to green 
+                            playButton.parentNode.parentNode.querySelector('.chat-header').classList.add('bg-success');
+                            // show survey-window when all response headers are green
+                            var responseHeaders = annotation_set.getElementsByClassName('chat-header');
+                            var allGreen = true;
+                            for (var i = 0; i < responseHeaders.length; i++) {
+                                if (!responseHeaders[i].classList.contains('bg-success')) {
+                                    allGreen = false;
+                                    break;
+                                }
+                            }
+                            if (allGreen) {
+                                console.log($(annotation_set).find('#survey-pane'))
+                                $(annotation_set).find('#survey-pane').removeClass('hidden');
+                            }
+                            toggleAllOtherPlayButtons(annotation_set, playButton);
+                        });
+
+                        playButton.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            if (audioPlayer.paused) {
+                                audioPlayer.play();
+                                playButton.textContent = 'Pause';
+                                // disable all other play buttons
+                                toggleAllOtherPlayButtons(annotation_set, playButton);
+                            } else {
+                                audioPlayer.pause();
+                                playButton.textContent = 'Play';
+                                // enable all other play buttons
+                                toggleAllOtherPlayButtons(annotation_set, playButton);
+                            }
+                        });
+                    });
+                }); 
+
+
+
+                // click on eye icon to show/hide text
+                var eyeIcons = document.getElementsByClassName('toggle-eye');
+                for (var i = 0; i < eyeIcons.length; i++) {
+                    eyeIcons[i].addEventListener('click', function(){
+                        //change one class name to another 
+                        return function(){
+                            this.classList.toggle('fa-eye-slash'); 
+                            this.classList.toggle('fa-eye'); 
+
+                            // hide/show text after click 
+                            var textElement = this.parentNode.parentNode.querySelector('.card-text');
+                            textElement.classList.toggle('hidden');
+                        }; 
+                    }());
+                }
+
+                // remove eye icons for actual collection 
+                for (var i = 0; i < eyeIcons.length; i++) {
+                    eyeIcons[i].classList.add('hidden');
+                }
+
+                // click on next button to show next annotation set
+                var nextButtonPanes = document.getElementsByClassName('next-button-pane');
+                console.log(nextButtonPanes)
+                for (var k = 0; k < nextButtonPanes.length; k++) {
+                    var nextButton = nextButtonPanes[k].querySelector('.btn');
+                    nextButton.addEventListener('click', (event) => {
+                        // prevent default 
+                        event.preventDefault();
+                        console.log("clicked next button")
+                        parent_annotation_set = nextButton.parentNode.parentNode.parentNode
+                        console.log(parent_annotation_set)
+                        //change one class name to another 
+
+                        parent_annotation_set.classList.add('hidden');
+                        // show next annotation set 
+                        parent_annotation_set.nextElementSibling.classList.remove('hidden');
+
+                    });
+                }
+            }
+
+            function disableButton(name) {
+                document.getElementById(name).disabled = true;
+            }
+
+            function enableButton(name) {
+                document.getElementById(name).disabled = false;
+            }
+
+            function ensureOneChecked(name) {
+                var elems = document.getElementsByName(name);
+                var okay = false;
+                for (var i = 0, l = elems.length; i < l; i++) {
+                    if (elems[i].checked) {
+                        okay = true;
+                        break;
+                    }
+                }
+                return okay;
+            }
+
+            disableButton('submitButton');
+            disableButton('nextButton')
+
+            function maybeEnableSubmit() {
+                // get all names of radio elements
+                var names = [];
+                var elems = document.getElementsByTagName('input');
+                for (var i = 0, l = elems.length; i < l; i++) {
+                    if (elems[i].type === 'radio') {
+                        names.push(elems[i].name);
+                    }
+                }
+
+                // get all textareas with classname mandatory 
+                var textareas = document.getElementsByClassName('mandatory');
+
+                // check if all radio elements have been checked
+                enable = true;
+                for (var i = 0; i < names.length; i++) {
+                    if (!ensureOneChecked(names[i])) {
+                        enable = false;
+                        console.log("not checked: " + names[i])
+                    }
+                }
+
+                for (var i = 0; i < textareas.length; i++) {
+                    if (textareas[i].value == "") {
+                        enable = false;
+                        console.log("empty textarea: " + textareas[i])
+                    }
+                }
+
+                if (enable){
+                    enableButton('submitButton');
+                }
+            }
+
+            function maybeEnableNext(survey_pane) {
+
+                // if there is not next button pane, return
+                if (survey_pane.parentNode.querySelector('.next-button-pane') == null){
+                    return;
+                }
+
+                // find next button 
+                var nextButton = survey_pane.parentNode // annotation_set
+                        .querySelector('.next-button-pane')
+                        .querySelector('.btn')
+                console.log(nextButton)
+
+                // check if all radio elements inside survey pane have been checked
+                enable = true;
+                var names = [];
+                var elems = survey_pane.getElementsByTagName('input');
+                for (var i = 0, l = elems.length; i < l; i++) {
+                    if (elems[i].type === 'radio') {
+                        names.push(elems[i].name);
+                    }
+                }
+
+                var textareas = survey_pane.getElementsByClassName('mandatory');
+
+                for (var i = 0; i < names.length; i++) {
+                    if (!ensureOneChecked(names[i])) {
+                        enable = false;
+                        console.log("not checked: " + names[i])
+                    }
+                }
+
+                for (var i = 0; i < textareas.length; i++) {
+                    if (textareas[i].value == "") {
+                        enable = false;
+                        console.log("empty textarea: " + textareas[i])
+                    }
+                }
+
+                if (enable){
+                    enableButton('nextButton');
+                }
+            }
+
+            // add maybeEnableSubmit to all radio buttons
+            var radioButtons = document.getElementsByClassName('radio_buttons');
+            for (let i = 0; i < radioButtons.length; i++) {
+                radioButtons[i].addEventListener('click', () => {
+                    // find next button in the same annotation set 
+                    survey_pane = radioButtons[i].parentNode // div
+                        .parentNode // mysection_yesno
+                        .parentNode // question-div
+                        .parentNode // survey-window
+                        .parentNode // survey-pane
+                        .parentNode
+                    
+
+                    console.log(survey_pane)
+                    maybeEnableSubmit();
+                    maybeEnableNext(survey_pane);   
+                });
+            }
+
+            // add maybeEnableSubmit to all textareas when something is typed
+            var textareas = document.getElementsByClassName('mandatory');
+            for (let i = 0; i < textareas.length; i++) {
+                textareas[i].addEventListener('input', () => {
+                    maybeEnableSubmit();
+                    maybeEnableNext(survey_pane);   
+                });
+            }
+
+
+        });
+    </script><!-- Close internal javascript -->
+    
+        <div id="main_submit">
+            <p class="text-center">
+                <input type="submit" id="submitButton" class="btn btn-primary" value="Submit" /> 
+            </p>
+        </div>
+    </form>
+    <script language="Javascript">turkSetAssignmentID();</script>
+    
+    <!-- Do no the remove the following line. It will be used to insert MTurk answers when done: -->
+    <!-- __ANSWERS__ -->
+    
+    </body></html>
+    
