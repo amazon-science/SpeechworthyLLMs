@@ -12,7 +12,7 @@ pytest==7.4.0
 # torch==2.0.1
 trl==0.5.0
 protobuf==3.20.0
-pydantic==1.7.4
+pydantic==1.10.13
 grpcio==1.64.0
 scipy==1.13.1
 scikit-learn==1.5.0
